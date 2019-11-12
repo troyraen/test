@@ -11,8 +11,8 @@ df, dfclust, dfclust_feats = uc.load_features(f=f, cfeat=cfeat)
 
 # isolation forest
 # dfclust_feats = uc.norm_features(dfclust_feats)
-lowtypes = dfclust.loc[dfclust.numinType<100,'newType'].unique()
-hitypes = dfclust.loc[dfclust.numinType>1000,'newType'].unique()
+lowtypes = dfclust.loc[dfclust.numinType<50,'newType'].unique()
+hitypes = dfclust.loc[dfclust.numinType>10000,'newType'].unique()
 
 dfhi = dfclust_feats.loc[dfclust.newType.isin(hitypes),:]
 dflow = dfclust_feats.loc[dfclust.newType.isin(lowtypes),:]
