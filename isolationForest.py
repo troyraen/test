@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 
-f = 'features.dat'
+f = 'upsilon_features.dat'
 # cfeat = 'B-V'
 cfeat = 'W3-W4'
 df, dfclust, dfclust_feats = uc.load_features(f=f, cfeat=cfeat)
